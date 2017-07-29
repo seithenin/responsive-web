@@ -1,0 +1,21 @@
+.contact {
+	background-color: $background-med-contrast-color;
+	padding: 50px 20px 70px 20px;
+
+	@include break($screen-size-desktop) {
+		height: 450px;
+	}
+
+	p {
+		@include break($screen-size-desktop) {
+			width: initial;
+		}
+	}
+
+	.contact-us-btn {
+		padding-left: 40px;
+	    padding-right: 40px;
+	    margin-top: 20px;
+	    width: auto;
+	}
+}

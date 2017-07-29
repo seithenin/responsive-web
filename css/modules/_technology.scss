@@ -1,0 +1,52 @@
+.technology {
+
+	margin: 0 20px;
+	margin-bottom: 60px;
+	@include break($screen-size-tablet) {
+		margin-left: 100px;
+		margin-right: 100px;
+		margin-top: 140px;
+		margin-bottom: 100px;
+	}
+
+	h2 {
+		margin-bottom: 34px;
+
+		@include break($screen-size-desktop) {
+			margin-bottom: 24px;			
+		}
+	}
+
+	ul {
+		padding-left: 25px;
+	}
+
+	ul > li {
+		color: $secondary-color;
+	}
+
+	ul > li > p {
+		margin-bottom: 0px;
+		margin-top: 0px;
+		color: $default-font-color;
+	}
+
+	& > div > div {
+		@include break($screen-size-desktop) {
+			width: 50%;
+			margin: 0 40px;
+		}
+	}
+
+	.what {
+		@include break($screen-size-desktop) {
+			margin-left: 0px;
+		}
+	}
+
+	@include break($screen-size-desktop) {
+		h1 {
+			font-size: 1.2em;
+		}
+	}
+}

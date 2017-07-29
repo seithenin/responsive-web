@@ -1,0 +1,152 @@
+$flourish-height-desktop: 1050px;
+$flourish-height-desktop-large: 1250px;
+
+.crop-sideways-bottle {
+	max-width: 312px;
+    overflow: hidden;
+    height: inherit;
+    position: relative;
+    z-index: 10;
+    bottom: 0;
+    margin-top: 0;
+    float: right;
+    top: -15vw;
+    margin-bottom: -100px;
+
+    @include break($screen-size-desktop) {
+	    float: right;
+	    max-width: 1200px;
+	    height: inherit;
+	    position: absolute;
+	    right: 0px;
+	    top: -80px;
+    }
+}
+
+.position-sideways-bottle {
+	@include break($screen-size-desktop) {
+	    position: relative;
+	    float: right;
+	}
+}
+
+.ingredients-and-results-contents {
+	@include break($screen-size-desktop) {
+		    padding-top: 20px;
+		}
+}
+
+.ingredients-and-results-contents img.sideways-bottle {
+
+	@include break($screen-size-desktop) {
+		height: 200px;
+	}
+}
+
+.flourish {
+	
+	@include break($screen-size-desktop) {
+		position: absolute;
+		margin-bottom: -133%;
+		right: 0px;
+	}
+	
+
+	img {
+		display: none;
+
+		@include break($screen-size-desktop) {
+			position: relative;
+			z-index: 1;
+			display: initial;
+			max-height: 1500px;
+		}
+	}
+}
+
+.ingredients {
+	background-color: $background-med-contrast-color;
+	padding: 80px 0 60px 0;
+
+	@include break($screen-size-desktop) {
+		font-size: 0.9em;
+		font-size: 1.3vw;
+		position: relative;
+		height: 1 * $flourish-height-desktop / 2.0;
+		padding: 80px 0 150px 0;
+	}
+
+	@include break(1200px) {
+		font-size: 1em;
+	}
+
+	img {
+		clear: both;
+		display: block;
+		width: 80px;
+		height: auto;
+		margin: 0px auto;
+
+		@include break($screen-size-desktop) {
+			width: 5%;
+		}
+	}
+
+	h2 {
+		margin-top: 5px;
+		text-align: center;
+	}
+
+	ul {
+		padding-left: 20px;
+	}
+
+	ul > li {
+		color: $secondary-color;
+		@include break($screen-size-desktop) {
+			padding-bottom: 0px;
+		}
+	}
+
+	ul > li > h3 {
+		font-size: 22px;
+		color: $secondary-color;
+		text-align: left;
+		@include break($screen-size-desktop) {
+			font-size: 20px;
+		}
+	}
+
+	.flex-container {
+		margin: 0 20px;
+		@include break($screen-size-tablet) {
+			margin: 0 100px;
+			display: table;
+		}
+	}
+
+	& .col-1 {
+		@include break($screen-size-desktop) {
+				position: absolute;
+				// margin-right: 20px;
+				width: 35%;
+				left: 100px;
+			}	
+		@include break($screen-size-desktop-large) {
+			width: 40%;
+		}
+	}
+
+
+	& .col-2 {
+		@include break($screen-size-desktop) {
+				position: absolute;
+				right: 100px;
+				width: 35%;
+			}	
+		@include break($screen-size-desktop-large) {
+			width: 40%;
+		}
+	}
+
+}

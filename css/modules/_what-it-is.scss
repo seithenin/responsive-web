@@ -1,0 +1,122 @@
+img.bottle-standout {
+	position: absolute;
+	top: 43vw;
+	left: 15px;
+}
+
+.bottle-alignment {
+	width: 100px;
+	width: 25vw;
+	height: 400px;
+	top: 78vw;
+	position: absolute;
+	@include break($screen-size-phone) {
+		top: 60vw;
+	}
+	@include break($screen-size-tablet) {
+		top: 45vw;
+		height: 625px;
+	}
+	@include break($screen-size-desktop) {
+		top: 40vw; // to prevent some words from being covered up
+	}
+	@include break($screen-size-desktop-mid) {
+		top: 36vw;
+	}
+	@include break($screen-size-desktop-large) {
+		top: 32vw;
+		height: 600px;
+	}
+
+	.bottle-standout {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		background-image: url('../img/bottle_small.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		@include break($screen-size-phone) {
+			background-image: url('../img/bottle_medium.png');
+		}
+		@include break($screen-size-tablet) {
+			background-image: url('../img/bottle_large.png');	
+		}
+		@include break($screen-size-desktop) {
+			background-image: url('../img/bottle_xlarge.png');	
+		}
+	}
+}
+
+.what-it-is-container {
+
+	margin-left:$margins-phone;
+	margin-right:$margins-phone;
+
+	@include break($screen-size-desktop) {
+		margin-left: 250px;
+		margin-left: 25vw;
+		margin-right: 125px;
+		margin-right: 10vw;
+	}
+
+	h2 {
+		margin-top: 50px
+	}
+
+	.text-bumper {
+		margin-top: 100px;
+
+		@include break($screen-size-desktop) {
+			margin-top: 0px;
+		}
+	}
+
+	.grid-container {
+		margin-top: 130px;
+		display: block;
+
+		@include clearfix();
+
+		@include break($screen-size-tablet) {
+			margin-left: 80px;
+		}
+
+		@include break($screen-size-desktop) {
+			margin-top: 40px;
+			margin-top: -50px;
+		}
+
+		.item {
+			display: table;
+			height: 136px;
+			text-align: center;
+			float: left;
+			width: 50%;
+			@include break($screen-size-desktop) {
+				width: 20%;
+			}
+
+			.item-content {
+				display: table-cell;
+				vertical-align: bottom;
+
+				img {
+					width: 80px;
+					height: auto;
+					@include break($screen-size-desktop) {
+						width: 56px;
+					}
+				}
+
+				i {
+					font-size: 1.1em;
+
+					@include break($screen-size-desktop) {
+						font-size: 0.7em;
+					}
+				}
+			}
+		}
+	}
+}

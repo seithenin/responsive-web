@@ -1,0 +1,33 @@
+@mixin backgroundImage($image) {
+	background: url($image);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+// Use by adding @include clearfix
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// media query mixin
+@mixin break($args) {
+	@if length($args) == 1 {
+		@media (min-width: nth($args, 1)) {
+			@content;
+		}	
+	}
+	@if length($args) == 2 {
+		@media (min-width: nth($args, 1))
+		 and (max-width: neth($args, 2)){
+		 	@content;
+		 }
+	}
+}

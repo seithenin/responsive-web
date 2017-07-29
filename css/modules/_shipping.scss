@@ -1,0 +1,67 @@
+
+.shipping {
+
+	background-color: $background-shipping;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	@include break($screen-size-desktop) {
+		padding-left: 300px;
+		padding-right: 100px;
+		height: 450px;
+
+		.col-1 {
+			padding-right: 20px;
+		}
+
+		.col-2 {
+			padding-left: 20px;
+		}
+
+	}
+
+	h2 {
+
+		margin-top: -30px;
+
+		@include break($screen-size-desktop) {
+			padding-top: 100px;
+		}
+	}
+
+	p {
+		@include break($screen-size-desktop) {
+			width: initial;
+		}
+	}
+
+	.truck-image-1 {
+		@include break(360px) {
+			background-image: url("../img/shipping_icon_small.png");
+			height: 65px;
+			position: relative;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: right top;
+			right: -20px;
+			top: 20px;
+		}
+		@include break($screen-size-desktop) {
+			display: none;
+		}
+	}
+
+	.truck-image-2 {
+
+		@include break($screen-size-desktop) {
+			position: relative;
+			top: -200px;
+			left: -358px;
+			background-image: url("../img/shipping_icon_medium.png");
+			background-position: left bottom;
+			background-size: contain;
+			height: 229px;
+			width: 308px;
+		}
+	}
+}

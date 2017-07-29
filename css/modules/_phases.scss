@@ -1,0 +1,98 @@
+.phases-content {
+
+	margin: 0 0px;
+	margin-bottom: 70px;
+	@include break($screen-size-tablet) {
+		margin: 0 100px;
+	}
+
+	h2 {
+		text-align: center;
+		padding: 50px $margins-phone;
+		padding-bottom: 40px;
+		@include break($screen-size-desktop) {
+			padding-bottom: 50px;
+		}
+	}
+
+	h4 {
+		.phase-title {
+			color: $dark-font-color;
+		}
+	}
+
+	img {
+		width: 100%;
+
+		@include break($screen-size-desktop) {
+			max-width: 180px;
+			height: auto;
+			width: auto;
+		}		
+
+		@include break($screen-size-desktop-mid) {
+			max-width: 240px;
+		}
+
+		@include break($screen-size-desktop-large) {
+			max-width: 335px;
+			height: auto;
+			width: auto;
+		}
+	}
+
+	.text-bumper {
+		margin-left: 20px;
+		margin-right: 20px;
+		@include break($screen-size-desktop) {
+			margin-left: 0px;
+		}
+	}
+
+	.phase-two, .phase-three {
+		margin-top: 90px;
+	}
+
+	.phase-one, .phase-two, .phase-three {
+		h3 {
+			font-size: 1.3em;
+		}
+		@include break($screen-size-desktop) {
+
+			margin-top: 0px;
+			margin-left: 40px;
+			margin-right: 40px;
+			// width: 20%;
+			// padding-left: 5%;
+
+			h3 {
+				font-size: 1em;
+				font-size: 1.3vw;
+			}
+
+			p {
+				width: initial;
+			}
+		}
+	}
+
+	.phase-one {
+		@include break($screen-size-desktop) {
+			margin-left: 0px;
+		}
+	}
+
+	.phase-two {
+		@include break($screen-size-desktop) {
+			
+		}
+	}
+
+	.phase-three {
+		@include break($screen-size-desktop) {
+
+			float: right;
+
+		}
+	}
+}

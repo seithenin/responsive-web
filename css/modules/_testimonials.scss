@@ -1,0 +1,229 @@
+$quotes-color: $light-grey;
+$quotes-height-desktop: 150px;
+$quotes-height-mobile: 250px;
+
+.testimonials {
+
+	margin-bottom: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 80px;
+
+	@include break($screen-size-desktop) {
+		margin-bottom: -250px;
+			margin-top: 135px;
+	}
+
+	h2 {
+		text-align: center;
+		padding-bottom: 25px;
+		@include break($screen-size-desktop) {
+			padding-bottom: 120px;
+		}
+	}
+
+	.table {
+		margin-left: 6%;
+		
+		@include break($screen-size-desktop) {
+			margin-left: 12%
+		}
+	}
+
+	.speech-balloon {
+		position: relative;
+		width: 90%;
+		margin-bottom: 50px;
+		text-align: left;
+		border: 2px solid $quotes-color;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 60px;
+		@include break($screen-size-desktop) {
+			width: 70%;
+			margin-left:10%;
+			margin-right: initial;
+		}
+	}
+
+	.speech-balloon:before {
+		content: ' ';
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		left: 30px;
+		bottom: -50px;
+		border: 25px solid;
+		border-color: $quotes-color transparent transparent transparent;
+	}
+
+	.speech-balloon:after {
+		content: ' ';
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		left: 35px;
+		bottom: -42px;
+		border: 21px solid;
+		border-color: #fff transparent transparent transparent;
+	}
+
+	.quote {
+		color: $default-font-color;
+		font-family: Georgia;
+		font-size: 1.3em;
+		margin: 25px 45px 25px 45px;
+		@include break($screen-size-desktop) {
+			font-size: 1em;
+		}
+	}
+
+	.quote:before {
+		display: block;
+	    padding-left: 10px;
+	    content: "\201C";
+	    font-size: 80px;
+	    position: relative;
+	    float:left;
+	    left: -40px;
+	    top: 0px;
+	    color: $quotes-color;
+	    margin-bottom: -80px;
+	}
+
+	.quote:after {
+		display: block;
+	    padding-left: 10px;
+	    content: "\201D";
+	    font-size: 80px;
+	    position: relative;
+	    float: right;
+	    right: -30px;
+	    bottom: -20px;
+	    color: $quotes-color;
+	}
+
+
+	.speech-balloon p {
+			padding-top: 20px;
+			padding-bottom: 0px;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-bottom: -40px;
+		}
+
+
+	.product-box {
+		@include break($screen-size-desktop) {
+			position: relative;
+			width: 112px;
+			height: 301px;
+			top: -400px;
+			margin-left: auto;
+			margin-right: auto;
+			background-image: url("../img/product_box_medium.png");
+			background-size: 112px 301px;
+
+			@include break($screen-size-desktop-mid) {
+				background-image: url("../img/product_box_large.png");
+			}
+
+
+			@include break($screen-size-desktop-large) {
+				background-image: url("../img/product_box_xlarge.png");
+			}
+		}
+	}
+
+	.testimonial-pic {
+		width: 90px;
+		padding-right: 30px;
+	}
+
+	.author {
+		font-size: 1.2em;
+		color: $secondary-color;
+	}
+
+	.author-description {
+		font-size: 1em;
+		color: $default-font-color;
+	}
+
+	.col-1, .col-2 {
+		&.display-show {
+			display: block;
+		}
+		&.display-hide {
+			display: none;
+		}
+	}
+	
+	.col-1 {
+		@include break($screen-size-desktop) {
+			display: block;
+		}
+	}
+
+	.col-2 {
+		display: none;
+
+		@include break($screen-size-desktop) {
+			display: block;
+		}
+	}
+
+	.selection-dots {
+		display: block;
+		text-align: center;
+		@include break($screen-size-desktop) {
+			display: none;
+		}
+
+	}
+
+	/* Hide the radio button */
+	.selection-dots input[type=radio] {
+	  display: none;
+	}
+
+	/* All styling takes place on the label element */
+	.selection-dots label {
+	  display: inline-block;
+	  background: $default-font-color;
+	  overflow: hidden;
+	  text-indent: -999px;
+	  border-radius: 50%;
+	  width: 15px;
+	  height: 15px;
+	  margin-right: 10px;
+	}
+
+	.selection-dots label:hover {
+	  background: $light-grey;
+	  cursor: pointer;
+	}
+
+	.selection-dots input:checked + label {
+	  background: $secondary-color;
+	}
+
+	img.to-top-link {
+		display: block;
+	    margin: 0 auto;
+	    height: 50px;
+	    margin-top: 50px;
+	    margin-bottom: -50px;
+
+	    @include break($screen-size-desktop) {
+	    	display: block;
+		    height: 100px;
+		    right: 0;
+		    margin: 0;
+		    margin-top: -250px;
+		    padding: 0;
+		    position: relative;
+		    float: right;
+	    }
+	}
+}

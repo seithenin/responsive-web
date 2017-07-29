@@ -1,0 +1,138 @@
+body {
+	font-family: $font-main;
+	margin: 0;
+}
+
+p {
+	font-family: $font-main;
+	color: $default-font-color;
+	font-size: 1.3rem; 
+
+	@include break($screen-size-desktop) {
+		font-size: 20px; 
+		margin-bottom: 30px;
+	}
+}
+
+/* colored */
+
+h1 {
+	font-weight: normal;
+	color: $orange;
+	font-size: 1.9em; 
+
+	@include break($screen-size-desktop) {
+		font-size: 2.2em;
+		line-height: 1.2em;
+	}
+}
+
+h2 {
+	font-weight: 600;
+	color: $orange;
+	font-size: 1.8em; 
+
+	@include break($screen-size-desktop) {
+		font-size: 28px; 
+	}
+}
+
+h3 {
+	font-weight: normal;
+	color: $orange;
+	font-size: 1.3em; 
+
+	@include break($screen-size-desktop) {
+		font-size: 20px;
+	}
+
+}
+
+h4 {
+	font-weight: normal;
+	color: $orange;
+	font-size: 22px; 
+	@include break($screen-size-desktop) {
+		margin-bottom:18px;
+	}
+}
+
+ul > li {
+	font-size: 1.3em; 
+	padding-bottom: 10px;
+
+	@include break($screen-size-desktop) {
+		font-size: 1.1em; 
+	}
+}
+
+.container {
+
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 1em 0 0 0;
+	justify-content: space-around;
+
+	@include break($screen-size-desktop) {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		margin: 1em 0;
+		justify-content: space-around;
+	}
+
+	.no-wrap {
+		flex-wrap: nowrap;
+	}
+}
+
+
+.table {
+	display: table;
+}
+
+.table-row {
+	display: table-row;
+}
+
+.table-cell {
+	display: table-cell;
+
+	&.valign-middle {
+		vertical-align: middle;
+	}
+}
+
+.fixed-width-container {
+	@include break($screen-size-desktop) {
+		width: 450px;
+		padding-top: 100px;
+		margin: auto;
+		height: 450px;
+		text-align: center;
+	}
+}
+
+// Measure the scroll bar width for js in
+//		determining width.
+// https://davidwalsh.name/detect-scrollbar-width
+.scrollbar-measure {
+	width: 100px;
+	height: 100px;
+	overflow: scroll;
+	position: absolute;
+	top: -9999px;
+}
+
+.z-index-5 {
+	position: relative;
+	z-index: 5;
+}
+
+.relative {
+	position: relative;
+}

@@ -1,0 +1,23 @@
+.video-content {
+	background-color: $background-hi-contrast-color;
+	text-align: center;
+	margin-top: 60px;
+	@include break($screen-size-desktop) {
+		margin-top: 60px;
+	}
+
+	h2 {
+		padding-top: 20px;
+		padding-bottom: 40px;
+		margin: 0px $margins-phone;
+		@include break($screen-size-desktop) {
+			padding-bottom: 20px;
+		}
+
+	}
+
+	img {
+		padding-bottom: 40px;
+		width: 90%;
+	}
+}
